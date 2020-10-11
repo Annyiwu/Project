@@ -14,6 +14,121 @@
     <title>Ann Gemstone Sitemap</title>
 </head>
 <body>
-    
+    <div>
+      <h2>About the Website</h2>
+      <ul>
+        <li><a href="index.html#website_info">Website Purpose</a></li>
+        <li><a href="index.html#Ann">Author's Self-introduction</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Gemstone Information</h2>
+      <ul>
+        <li><a href="introduction.html#category">Categories</a></li>
+        <li><a href="introduction.html#brand">Representative Brands</a></li>
+        <li><a href="introduction.html#formation">Formation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Gemstone Manufacturing</h2>
+      <ul>
+        <li><a href="manufacturing.html#sourcing">Sourcing</a></li>
+        <li><a href="manufacturing.html#originated_place">Originated Places</a></li>
+        <li><a href="manufacturing.html#polishing">Polishing</a></li>
+        <li><a href="manufacturing.html#laboratory">Representative Gemology Laboratories</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Gemstone Application</h2>
+      <ul>
+        <li><a href="application.html#setting">Settings</a></li>
+        <li><a href="application.html#setting_tech">Relevant Technology</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Environmental Impacts</h2>
+      <ul>
+        <li><a href="environment.html#impact">Environmental Impacts</a></li>
+        <li><a href="environment.html#solution">Potential Solutions</a></li>
+      </ul>
+    </div>
+      <h2>Feedback Form</h2>
+      <form action="" method="POST">
+        <div>
+          <input
+            type="text" name="Email" id="Email"
+            placeholder="Email Address"/> 
+        </div>
+      
+        <div>
+          Gender:
+            <label>
+                Male
+                <input type="radio" name="gender" value="male"/>
+            </label>
+            <label>
+                Female
+                <input type="radio" name="gender" value="female"/>
+            </label>
+            <label>
+                Prefer not to tell
+              <input type="radio" name="gender" value="prefer_not_tell"/>
+            </label>
+        </div>
+
+        <div>Topic(s) I found interesting is(are):</div>
+        <div>
+          <div>
+            <input 
+             type="checkbox" id="introduction" name="topics" value="introduction"
+             />
+             <label for="introduction">Introduction</label> 
+         </div>
+
+         <div>
+           <input 
+           type="checkbox" id="manufacturing" name="topics" value="manufacturing"
+           />
+           <label for="manufacturing">Manufacturing</label> 
+         </div>
+          <div>
+            <input 
+            type="checkbox" id="application" name="topics" value="application"
+            />
+            <label for="application">Application</label>
+          </div>
+          <div>
+            <input 
+            type="checkbox" id="environment" name="topics" value="environment"
+            />
+            <label for="environment">Environment</label>
+          </div>
+          <div>
+            <input 
+            type="checkbox" id="none" name="topics" value="none"
+            />
+            <label for="none">None</label>
+          </div>
+        </div>
+
+        <div>Leave any topics you would like to know more about gemstones</div>
+        <div>
+          <textarea
+              id="comments"
+              name="comments"
+              rows="10"
+              cols="40"
+              placeholder="Enter your other interests about gemstones here..." 
+          ></textarea>    
+        </div>
+        <div>
+          <button type="submit" name="submit-button">
+              <img src="https://img.icons8.com/bubbles/2x/upload.png" width="60">
+          </button>
+          <button type="reset" name="reset_button">
+              <img src="https://img.icons8.com/bubbles/2x/recurring-appointment.png" width="60">
+          </button>
+        </div>
+      </form>
 </body>
 </html>

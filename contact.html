@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>contact us</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style type="text/css">
+        .link {
+            width: 50px;
+            height: 220px;
+            position: absolute;
+            border-right: solid black 2px;
+        }
+
+        .header {
+            background-image: url(images/index.jpeg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 1920px 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" style="height:400px;">
+    </div>
+    <div class="text-style">
+        <div class="left">
+            <div style="width: 100%;height: 100%;text-align: center">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="mailto:ywu4@babson.edu" target="_blank" style="font-weight: bold;color: black"><b>Email
+                                Me</b></a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="https://github.com/Annyiwu" target="_blank"
+                            style="font-weight: bold;color: black"><b>Github Profile Page</b></a>
+                    </li>
+                    <br>
+                    <li>
+                        <a href="http://Instagram.com/annyi_wu" target="_blank"
+                            style="font-weight: bold;color: black"><b>Instagram Profile Page</b></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="link"></div>
+            <div style="text-align: center">
+                <div style="width: 100%;height: 100%;text-align: center">  
+                        <h2>Feedback Form</h2>
+                        <form action="" method="POST" class="form-inline myForm">
+                            <div class="form-group">
+                                <input type="text" name="Email" id="Email" placeholder="Email Address" />
+                            </div>
+
+                            <div class="form-group">
+                                Gender:
+                                <label>
+                                    Male
+                                    <input type="radio" name="gender" value="male" />
+                                </label>
+                                <label>
+                                    Female
+                                    <input type="radio" name="gender" value="female" />
+                                </label>
+                                <label>
+                                    Prefer not to tell
+                                    <input type="radio" name="gender" value="prefer_not_tell" />
+                                </label>
+                            </div>
+
+                            <div>Topic(s) I found interesting is(are):</div>
+                            <div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="introduction" name="topics" value="introduction" />
+                                    <label for="introduction">Introduction</label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="checkbox" id="manufacturing" name="topics" value="manufacturing" />
+                                    <label for="manufacturing">Manufacturing</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="application" name="topics" value="application" />
+                                    <label for="application">Application</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="environment" name="topics" value="environment" />
+                                    <label for="environment">Environment</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="none" name="topics" value="none" />
+                                    <label for="none">None</label>
+                                </div>
+                            </div>
+
+                            <div>Leave any topics you would like to know more about gemstones</div>
+                            <div>
+                                <textarea class="form-control" id="comments" name="comments" rows="10" cols="40"
+                                    placeholder="Enter your other interests about gemstones here..."></textarea>
+                            </div>
+                            <div>
+                                <button class="btn btn-default forms" type="submit" name="submit-button">
+                                    <img src="https://img.icons8.com/bubbles/2x/upload.png" width="60">
+                                </button>
+                                <button class="btn btn-default forms" type="reset" name="reset_button">
+                                    <img src="https://img.icons8.com/bubbles/2x/recurring-appointment.png" width="60">
+                                </button>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation" style="margin-top: 10px">
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".header").load("header.html")
+            $(".navigation").load("navigation.html")
+            $(".forms").on('click', function () {
+                console.log($(".myForm").serialize())
+                $.get("/user", $(".myForm").serialize(), function (result) {
+                    alert(result)
+                })
+            })
+
+        })
+    </script>
+
+</html>

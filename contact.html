@@ -21,6 +21,16 @@
             background-size: 1920px 400px;
         }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54516992-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-54516992-1');
+    </script>
+
 </head>
 
 <body>
@@ -51,67 +61,67 @@
         <div class="right">
             <div class="link"></div>
             <div style="text-align: center">
-                <div style="width: 100%;height: 100%;text-align: center">  
-                        <h2>Feedback Form</h2>
-                        <form action="" method="POST" class="form-inline myForm">
+                <div style="width: 100%;height: 100%;text-align: center">
+                    <h2>Feedback Form</h2>
+                    <form action="" method="POST" class="form-inline myForm">
+                        <div class="form-group">
+                            <input type="text" name="Email" id="Email" placeholder="Email Address" />
+                        </div>
+
+                        <div class="form-group">
+                            Gender:
+                            <label>
+                                Male
+                                <input type="radio" name="gender" value="male" />
+                            </label>
+                            <label>
+                                Female
+                                <input type="radio" name="gender" value="female" />
+                            </label>
+                            <label>
+                                Prefer not to tell
+                                <input type="radio" name="gender" value="prefer_not_tell" />
+                            </label>
+                        </div>
+
+                        <div>Topic(s) I found interesting is(are):</div>
+                        <div>
                             <div class="form-group">
-                                <input type="text" name="Email" id="Email" placeholder="Email Address" />
+                                <input type="checkbox" id="introduction" name="topics" value="introduction" />
+                                <label for="introduction">Introduction</label>
                             </div>
 
                             <div class="form-group">
-                                Gender:
-                                <label>
-                                    Male
-                                    <input type="radio" name="gender" value="male" />
-                                </label>
-                                <label>
-                                    Female
-                                    <input type="radio" name="gender" value="female" />
-                                </label>
-                                <label>
-                                    Prefer not to tell
-                                    <input type="radio" name="gender" value="prefer_not_tell" />
-                                </label>
+                                <input type="checkbox" id="manufacturing" name="topics" value="manufacturing" />
+                                <label for="manufacturing">Manufacturing</label>
                             </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="application" name="topics" value="application" />
+                                <label for="application">Application</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="environment" name="topics" value="environment" />
+                                <label for="environment">Environment</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="none" name="topics" value="none" />
+                                <label for="none">None</label>
+                            </div>
+                        </div>
 
-                            <div>Topic(s) I found interesting is(are):</div>
-                            <div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="introduction" name="topics" value="introduction" />
-                                    <label for="introduction">Introduction</label>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="checkbox" id="manufacturing" name="topics" value="manufacturing" />
-                                    <label for="manufacturing">Manufacturing</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="application" name="topics" value="application" />
-                                    <label for="application">Application</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="environment" name="topics" value="environment" />
-                                    <label for="environment">Environment</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="none" name="topics" value="none" />
-                                    <label for="none">None</label>
-                                </div>
-                            </div>
-
-                            <div>Leave any topics you would like to know more about gemstones</div>
-                            <div>
-                                <textarea class="form-control" id="comments" name="comments" rows="8" cols="60"
-                                    placeholder="Enter your other interests about gemstones here..."></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-default forms" type="submit" name="submit-button">
-                                    <img src="https://img.icons8.com/bubbles/2x/upload.png" width="40">
-                                </button>
-                                <button class="btn btn-default forms" type="reset" name="reset_button">
-                                    <img src="https://img.icons8.com/bubbles/2x/recurring-appointment.png" width="40">
-                                </button>
-                            </div>
+                        <div>Leave any topics you would like to know more about gemstones</div>
+                        <div>
+                            <textarea class="form-control" id="comments" name="comments" rows="8" cols="60"
+                                placeholder="Enter your other interests about gemstones here..."></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-default forms" type="submit" name="submit-button">
+                                <img src="https://img.icons8.com/bubbles/2x/upload.png" width="40">
+                            </button>
+                            <button class="btn btn-default forms" type="reset" name="reset_button">
+                                <img src="https://img.icons8.com/bubbles/2x/recurring-appointment.png" width="40">
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

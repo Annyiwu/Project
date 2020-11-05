@@ -9,12 +9,12 @@
     <title>contact us</title>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <style type="text/css">
         .link {
             width: 50px;
             height: 220px;
             position: absolute;
-            border-right: solid black 2px;
         }
 
         .header {
@@ -39,9 +39,9 @@
 <body>
     <div class="header" style="height:400px;">
     </div>
-    <div class="text-style">
-        <div class="left">
-            <div style="width: 100%;height: 100%;text-align: center">
+    <div class="text-style" style="height: 500px">
+        <div class="left", style="width: 15%;margin-right: 10px;">
+            <div style="width: 100%;height: 100%;text-align: center;display: flex; align-items: center">
                 <ul class="list-unstyled">
                     <li>
                         <a href="mailto:ywu4@babson.edu" target="_blank" style="font-weight: bold;color: black"><b>Email
@@ -61,17 +61,18 @@
 
             </div>
         </div>
-        <div class="right">
+        <div class="right" style="width:30%;height:500px;border-left:solid black 2px;">
             <div class="link"></div>
             <div style="text-align: center">
-                <div style="width: 100%;height: 100%;text-align: center">
+                <div style="width: 100%;text-align: center">
                     <h2>Feedback Form</h2>
-                    <form action="" method="POST" class="form-inline myForm">
+                    <br>
+                    <form action="" method="POST" class="form-inline myForm" style=";text-align: left; margin-left:30px;height:450px">
                         <div class="form-group">
                             <input type="text" name="Email" id="Email" placeholder="Email Address" />
                         </div>
-
-                        <div class="form-group">
+                        <br>
+                        <div class="form-group" style="text-align: left;">
                             Gender:
                             <label>
                                 Male
@@ -86,8 +87,7 @@
                                 <input type="radio" name="gender" value="prefer_not_tell" />
                             </label>
                         </div>
-
-                        <div>Topic(s) I found interesting is(are):</div>
+                        <div style="text-align: left;">Topic(s) I found interesting is(are):</div>
                         <div>
                             <div class="form-group">
                                 <input type="checkbox" id="introduction" name="topics" value="introduction" />
@@ -112,7 +112,7 @@
                             </div>
                         </div>
 
-                        <div>Leave any topics you would like to know more about gemstones</div>
+                        <div style="text-align: left;">Leave any topics you would like to know more about gemstones</div>
                         <div>
                             <textarea class="form-control" id="comments" name="comments" rows="8" cols="60"
                                 placeholder="Enter your other interests about gemstones here..."></textarea>
@@ -132,7 +132,7 @@
     </div>
     <div class="navigation" style="margin-top: 10px">
     </div>
-
+</body>
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript">
         $(function () {

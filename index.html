@@ -9,6 +9,7 @@
     <title>Gemstone-pedia</title>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <style type="text/css">
         .header {
             background-image: url('images/index.jpeg');
@@ -35,16 +36,16 @@
 </head>
 
 <body>
-    <div class="header" style="height:400px;">
+    <div class="header" style="height:400px">
     </div>
     <div class="just">
         <div class="text-style">
-            <div class="left">
+            <div class="left" style="margin-left: 17%">
                 <img class="img-thumbnail"
                     src="https://www.jckonline.com/wp-content/uploads/2019/05/global-gemstones-gems.jpg"
                     title="Gemstones" alt="Gemstones" width="300">
             </div>
-            <div class="right">
+            <div class="right"; style="margin-left: 10px;margin-right: 17%;width: 41%">
                 <div style="text-align: center">
                     <h2>Our purpose</h2>
                     <p class="text-muted text-left p1">
@@ -77,21 +78,11 @@
                             sustainable ways as solutions in the future of gemstone industry.
                         </li>
                     </ul>
-                    </p>
-                    <!--               <p class="text-primary">-->
-                    <!--                   ...... ......-->
-                    <!--               </p>-->
-                    <!--               <p class="text-primary">-->
-                    <!--                   ...... ......-->
-                    <!--               </p>-->
-                    <!--               <p class="text-primary">-->
-                    <!--                   ...... ......-->
-                    <!--               </p>-->
                 </div>
             </div>
         </div>
         <div class="text-style" style="background-color: #F8F8F8;height: 450px">
-            <div class="left">
+            <div class="left" style="width: 37%;margin-right: 10px">
                 <div style="text-align: center">
                     <h2 id="Ann">About Us</h2>
                     <p class="text-muted text-left p1">Ann</p>
@@ -114,8 +105,10 @@
                     <p class="text-primary"></p>
                 </div>
             </div>
-            <div class="right">
-                <img class="img-thumbnail" src="images/Ann Photo.jpg" title="Ann_Photo" alt="Ann_Photo" width="330">
+            <div class="right" style="width: 21%">
+                <br>
+                <img class="img-thumbnail" id="ann_photo" src="images/Ann Photo.jpeg" title="Ann_Photo" alt="Ann_Photo" style="width: 70%;text-align: left" onclick="enlarge()">
+                <h5 style="text-align: center;color: #737373">click to see me more clearly</h5>
             </div>
         </div>
 
@@ -130,6 +123,9 @@
         $(".header").load("header.html")
         $(".navigation").load("navigation.html")
     })
+    function enlarge(){
+        document.getElementById("ann_photo").style="width: 500 px"
+    }
 </script>
 
 </html>

@@ -78,15 +78,6 @@
                             sustainable ways as solutions in the future of gemstone industry.
                         </li>
                     </ul>
-                    <!--               <p class="text-primary">-->
-                    <!--                   ...... ......-->
-                    <!--               </p>-->
-                    <!--               <p class="text-primary">-->
-                    <!--                   ...... ......-->
-                    <!--               </p>-->
-                    <!--               <p class="text-primary">-->
-                    <!--                   ...... ......-->
-                    <!--               </p>-->
                 </div>
             </div>
         </div>
@@ -115,7 +106,9 @@
                 </div>
             </div>
             <div class="right" style="width: 21%">
-                <img class="img-thumbnail" src="images/Ann Photo.jpeg" title="Ann_Photo" alt="Ann_Photo" width="330">
+                <br>
+                <img class="img-thumbnail" id="ann_photo" src="images/Ann Photo.jpeg" title="Ann_Photo" alt="Ann_Photo" style="width: 70%;text-align: left" onclick="enlarge()">
+                <h5 style="text-align: center;color: #737373">click to see me more clearly</h5>
             </div>
         </div>
 
@@ -130,6 +123,9 @@
         $(".header").load("header.html")
         $(".navigation").load("navigation.html")
     })
+    function enlarge(){
+        document.getElementById("ann_photo").style="width: 500 px"
+    }
 </script>
 
 </html>

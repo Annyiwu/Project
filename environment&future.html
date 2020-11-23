@@ -21,11 +21,11 @@
 
 </head>
 
-<body>
+<body onload="show()">
     <div class="header" style="height:400px;">
     </div>
     <div class="just">
-        <div class="text-style" style="margin-left: 20%;margin-right: 20%;width:60%;height:550px">
+        <div class="text-style" style="margin-left: 20%;margin-right: 20%;width:60%;height:600px">
             <br>
             <h2 style="text-align: center">Harms to local environment</h2>
             <br>
@@ -44,11 +44,10 @@
             <p>
                 A 2004 study in central Sri Lanka counted 9123 gem pits in an area of 1253ha in the region of Elahera. Extrapolated to a global scale this means that there must easily be over a million unfilled pits on the globe. This number may be difficult to imagine, so let’s take a look at the aerial view of Ilakaka (Madagascar) village and its “Banque Mondiale“ sapphire mining area: each small black dot represents a small, but often deep, gemstone mining pit. The refilling costs are massive and brings the challenge of solving this environmental and ethical to the gemstone industry.
             </p>
-            <br>
-            <img class="thumbnail" src="https://blog.nationalgeographic.org/wp-content/uploads/2012/01/Feig1.jpg" alt="" style="height:150px; float:left">
-            <img class="thumbnail" src="http://blog.nationalgeographic.org/wp-content/uploads/2012/01/Fig-3.jpg" alt="" style="height:150px; float:left; margin-left: 80px">
-            <img class="thumbnail" src="images/environment&future_harm.png" alt="" style="height:150px; float:left;margin-left: 80px">
-        </div>
+            <div style="text-align: center">
+            <img class="thumbnail" id="pic" src="https://blog.nationalgeographic.org/wp-content/uploads/2012/01/Feig1.jpg" alt="" style="height:250px; margin-left: 27%">
+            </div>
+            </div>
 
 
         <div class="text-style" style="background-color: #F8F8F8;height: 600px">
@@ -79,6 +78,23 @@
         $(".header").load("header.html")
         $(".navigation").load("navigation.html")
     })
+
+    const slides=[
+        "https://blog.nationalgeographic.org/wp-content/uploads/2012/01/Feig1.jpg",
+        "http://blog.nationalgeographic.org/wp-content/uploads/2012/01/Fig-3.jpg",
+        "images/environment&future_harm.png"
+    ]
+    let i=0
+    function show() {
+        const imge = document.getElementById("pic");
+
+        if (i === slides.length) {
+            i = 0;
+        }
+        imge.src = slides[i];
+        i++;
+        setTimeout(show, 1000);
+    }
 </script>
 
 </html>

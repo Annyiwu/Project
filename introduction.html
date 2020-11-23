@@ -32,6 +32,7 @@
 <body>
   <div class="header" style="height: 400px"></div>
   <div class="just">
+    <div style="margin-left: 15%;margin-right: 15%">
     <div style="text-align: center">
       <h2>Categories</h2>
     </div>
@@ -157,10 +158,17 @@
       </div>
       <div class="right">
         <div style="text-align: center">
-          <img class="img-thumbnail" src="images/brands.jpg" title="VCA and Chaumet" alt="VCA and Chaumet" width="400">
+          <br>
+          <h5 style="text-align: center" id="ti">Van Cleef & Arpels</h5>
+          <img class="img-thumbnail" id="brands" src="images/vca.jpeg" title="Van Cleef & Arpels" alt="VCA and Chaumet"  width="300" onmouseover="change_image()" onmouseout="change_image_back()">
+          <h5 style="text-align: center;color: #737373">move to check other images</h5>
         </div>
       </div>
+    </div>
+    </div>
+    <div>
       <div class="text-style" style="background-color: #f8f8f8">
+        <div style="margin-left: 15%; margin-right: 15%">
         <div style="text-align: center">
           <h2>Formation</h2>
         </div>
@@ -210,10 +218,13 @@
             <img class="img-thumbnail" src="http://thegemmuseum.gallery/wp-content/uploads/2017/07/rock-cycle.jpg"
               title="rock cycle" alt="rock-cycle" width="400" />
           </div>
+        </div>
           <p class="text-muted text-left">
           </p>
         </div>
       </div>
+      </div>
+  </div>
     </div>
   </div>
     <div class="navigation"></div>
@@ -224,6 +235,16 @@
     $(".header").load("header.html");
     $(".navigation").load("navigation.html");
   });
+  function change_image(){
+    document.getElementById("brands").title="Chaumet";
+    document.getElementById("brands").src="images/chaumet.jpeg";
+    document.getElementById("ti").innerText="Chaumet";
+  }
+  function change_image_back(){
+    document.getElementById("brands").title="Van Cleef & Arpels";
+    document.getElementById("brands").src="images/vca.jpeg";
+    document.getElementById("ti").innerText="Van Cleef & Arpels";
+  }
 </script>
 
 </html>
